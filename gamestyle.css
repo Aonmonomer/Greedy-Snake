@@ -8,8 +8,8 @@ body{
 #title{
   text-align: left;
   color: greenyellow;
-  line-height: 100px;
-  height: 75px;
+  line-height: 25px;
+  height: 8px;
   font-size: 3rem ;
   text-decoration: underline;
 
@@ -30,6 +30,7 @@ h2{
 .setBackground{
 
   background-color: rgb(138, 191, 138);
+  border: 5px solid darkgreen;
 }
 
 img{
@@ -53,7 +54,20 @@ button{
 }
 #snakeBoard {
   border: 5px solid darkgreen;
-  width: 600px;
-  height: 600px;
+  width: 650px;
+  height: 650px;
   background-color: rgb(138, 191, 138);
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
+}
+.snake{
+  background-color: olivedrab;
+  border: 2px solid black;
+}
+
+.food{
+  background-color: yellow;
+  border: 2px solid black;
+  border-radius: 50%;
 }
