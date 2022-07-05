@@ -1,0 +1,59 @@
+body{
+  background: url(jungle)black no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#title{
+  text-align: left;
+  color: greenyellow;
+  line-height: 100px;
+  height: 75px;
+  font-size: 3rem ;
+  text-decoration: underline;
+
+}
+
+h3{
+  text-decoration: underline;
+}
+
+.leftColumn{
+  color: black;
+}
+
+h2{
+  display: inline;
+}
+
+.setBackground{
+
+  background-color: rgb(138, 191, 138);
+}
+
+img{
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.score {
+  margin: 10px 275px;
+}
+
+button{
+  display: inline-block;
+  margin: 30px 30px;
+  padding: 10px 100px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  font-size: large;
+}
+#snakeBoard {
+  border: 5px solid darkgreen;
+  width: 600px;
+  height: 600px;
+  background-color: rgb(138, 191, 138);
+}
