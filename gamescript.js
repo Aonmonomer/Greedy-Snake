@@ -45,6 +45,7 @@ const updateSnake = () => {
 
 let update = () => {
   updateSnake()
+  updateFood()
 }
 
 // Control direction
@@ -90,3 +91,33 @@ const drawFood = (snakeBoard) => {
 }
 
 //Snake Eat Food Mechanism
+
+const growRate = 3
+let newTail = 0
+
+const growSnake = (amount) => {
+  newTail += amount
+}
+const samePositions = (position1, position2) => {
+  return position1.x === position2.x && position1.y === position2.y
+}
+
+const onSnake = (position) => {
+  return snakeBody.some((bodyPiece) => {
+    return samePositions(bodyPiece, position)
+  })
+}
+
+const updateFood = () => {
+  if (onSnake(food)) {
+    growSnake(growRate)
+    food = { x: 20, y: 10 }
+  }
+}
+
+const addTail = () => {
+  for (let i = 0; i < newTail; i++) {
+    snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
+  }
+  newTail = 0
+}
