@@ -7,9 +7,14 @@ backButton.addEventListener('click', () => {
 
 // Control game Speed and refresh game rate
 let lastRenderTime = 0
+let gameOver = false
 const snakeSpeed = 5
 
 const gameRate = (currentTime) => {
+  if (gameOver === true) {
+    return alert('You lose!')
+  }
+
   requestAnimationFrame(gameRate)
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
   if (secondsSinceLastRender < 1 / snakeSpeed) return
@@ -54,6 +59,7 @@ const updateSnake = () => {
 let update = () => {
   updateSnake()
   updateFood()
+  checkLosing()
 }
 
 // Control direction
@@ -110,8 +116,9 @@ const samePositions = (position1, position2) => {
   return position1.x === position2.x && position1.y === position2.y
 }
 
-const onSnake = (position) => {
-  return snakeBody.some((bodyPiece) => {
+const onSnake = (position, { ignoreHead = false } = {}) => {
+  return snakeBody.some((bodyPiece, index) => {
+    if (ignoreHead === true && index === 0) return false
     return samePositions(bodyPiece, position)
   })
 }
@@ -146,4 +153,25 @@ const randomBoardPosition = () => {
     x: Math.floor(Math.random() * boardSize) + 1,
     y: Math.floor(Math.random() * boardSize) + 1
   }
+}
+
+const checkLosing = () => {
+  gameOver = hitthewall(snakeHead()) || hitSelf()
+}
+
+const hitthewall = (position) => {
+  return (
+    position.x < 1 ||
+    position.x > boardSize ||
+    position.y < 1 ||
+    position.y > boardSize
+  )
+}
+
+const snakeHead = () => {
+  return snakeBody[0]
+}
+
+const hitSelf = () => {
+  return onSnake(snakeBody[0], { ignoreHead: true })
 }
