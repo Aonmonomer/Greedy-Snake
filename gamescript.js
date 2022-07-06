@@ -1,3 +1,5 @@
+// Event Listener for buttons
+
 const backButton = document.getElementById('backBtn')
 
 backButton.addEventListener('click', () => {
@@ -11,7 +13,7 @@ playAgainButton.addEventListener('click', () => {
     'file:///Users/sengkitmun/ga_seir/projects/Greedy-Snake/game.html'
 })
 
-// Control game Speed and refresh game rate
+// Control game Speed, game score and main game refresh rate
 let lastRenderTime = 0
 let gameOver = false
 const snakeSpeed = 10
@@ -19,7 +21,8 @@ let gameScore = 0
 
 const gameRate = (currentTime) => {
   if (gameOver === true) {
-    return alert('You lose!')
+    document.getElementById('messageBoard').innerText = `You lose, try again!`
+    return
   }
 
   requestAnimationFrame(gameRate)
@@ -101,7 +104,7 @@ let getControlDirection = () => {
 
 // Create Food
 
-let food = { x: 10, y: 1 }
+let food = { x: 5, y: 11 }
 
 const drawFood = (snakeBoard) => {
   const snakeFood = document.createElement('div')
@@ -113,7 +116,7 @@ const drawFood = (snakeBoard) => {
 
 //Snake Eat Food Mechanism
 
-const growRate = 3
+const growRate = 2
 let newTail = 0
 
 const growSnake = (amount) => {
@@ -133,6 +136,7 @@ const onSnake = (position, { ignoreHead = false } = {}) => {
 const updateFood = () => {
   if (onSnake(food)) {
     gameScore += 10
+    document.getElementById('scoreDisplay').innerText = gameScore
     growSnake(growRate)
     food = randomFoodPosition()
   }
