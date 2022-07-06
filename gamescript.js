@@ -1,3 +1,4 @@
+// Control game Speed and refresh game rate
 let lastRenderTime = 0
 const snakeSpeed = 5
 
@@ -12,6 +13,24 @@ const gameRate = (currentTime) => {
 }
 requestAnimationFrame(gameRate)
 
+// Draw the snake
+const drawSnake = (snakeBoard) => {
+  snakeBody.forEach((bodyPiece) => {
+    const snakePiece = document.createElement('div')
+    snakePiece.style.gridRowStart = bodyPiece.y
+    snakePiece.style.gridColumnStart = bodyPiece.x
+    snakePiece.setAttribute('class', 'snake')
+    snakeBoard.appendChild(snakePiece)
+  })
+}
+
+let draw = () => {
+  snakeBoard.innerHTML = ''
+  drawSnake(snakeBoard)
+  drawFood(snakeBoard)
+}
+
+// Move the snake & update the snake
 const snakeBody = [{ x: 11, y: 11 }]
 const snakeBoard = document.getElementById('snakeBoard')
 
@@ -24,23 +43,8 @@ const updateSnake = () => {
   snakeBody[0].y += controlDirection.y
 }
 
-const drawSnake = (snakeBoard) => {
-  snakeBody.forEach((bodyPiece) => {
-    const snakePiece = document.createElement('div')
-    snakePiece.style.gridRowStart = bodyPiece.y
-    snakePiece.style.gridColumnStart = bodyPiece.x
-    snakePiece.classList.add('snake')
-    snakeBoard.appendChild(snakePiece)
-  })
-}
 let update = () => {
   updateSnake()
-  // console.log('update snake')
-}
-let draw = () => {
-  snakeBoard.innerHTML = ''
-  drawSnake(snakeBoard)
-  // console.log('draw snake')
 }
 
 // Control direction
@@ -72,3 +76,17 @@ let getControlDirection = () => {
   lastControlDirection = controlDirection
   return controlDirection
 }
+
+// Create Food
+
+let food = { x: 10, y: 1 }
+
+const drawFood = (snakeBoard) => {
+  const snakeFood = document.createElement('div')
+  snakeFood.style.gridRowStart = food.y
+  snakeFood.style.gridColumnStart = food.x
+  snakeFood.setAttribute('class', 'food')
+  snakeBoard.appendChild(snakeFood)
+}
+
+//Snake Eat Food Mechanism
