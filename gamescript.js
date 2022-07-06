@@ -1,3 +1,10 @@
+const backButton = document.getElementById('backBtn')
+
+backButton.addEventListener('click', () => {
+  window.location.href =
+    'file:///Users/sengkitmun/ga_seir/projects/Greedy-Snake/start.html'
+})
+
 // Control game Speed and refresh game rate
 let lastRenderTime = 0
 const snakeSpeed = 5
@@ -35,6 +42,7 @@ const snakeBody = [{ x: 11, y: 11 }]
 const snakeBoard = document.getElementById('snakeBoard')
 
 const updateSnake = () => {
+  addTail()
   const controlDirection = getControlDirection()
   for (let i = snakeBody.length - 2; i >= 0; i--) {
     snakeBody[i + 1] = { ...snakeBody[i] }
@@ -111,7 +119,7 @@ const onSnake = (position) => {
 const updateFood = () => {
   if (onSnake(food)) {
     growSnake(growRate)
-    food = { x: 20, y: 10 }
+    food = randomFoodPosition()
   }
 }
 
@@ -120,4 +128,22 @@ const addTail = () => {
     snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
   }
   newTail = 0
+}
+
+// Random Food Position
+
+let randomFoodPosition = () => {
+  let newFoodPosition
+  while (newFoodPosition == null || onSnake(newFoodPosition)) {
+    newFoodPosition = randomBoardPosition()
+  }
+  return newFoodPosition
+}
+
+const boardSize = 21
+const randomBoardPosition = () => {
+  return {
+    x: Math.floor(Math.random() * boardSize) + 1,
+    y: Math.floor(Math.random() * boardSize) + 1
+  }
 }
