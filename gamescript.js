@@ -5,10 +5,17 @@ backButton.addEventListener('click', () => {
     'file:///Users/sengkitmun/ga_seir/projects/Greedy-Snake/start.html'
 })
 
+const playAgainButton = document.getElementById('playAgainBtn')
+playAgainButton.addEventListener('click', () => {
+  window.location.href =
+    'file:///Users/sengkitmun/ga_seir/projects/Greedy-Snake/game.html'
+})
+
 // Control game Speed and refresh game rate
 let lastRenderTime = 0
 let gameOver = false
-const snakeSpeed = 5
+const snakeSpeed = 10
+let gameScore = 0
 
 const gameRate = (currentTime) => {
   if (gameOver === true) {
@@ -125,6 +132,7 @@ const onSnake = (position, { ignoreHead = false } = {}) => {
 
 const updateFood = () => {
   if (onSnake(food)) {
+    gameScore += 10
     growSnake(growRate)
     food = randomFoodPosition()
   }
@@ -154,6 +162,8 @@ const randomBoardPosition = () => {
     y: Math.floor(Math.random() * boardSize) + 1
   }
 }
+
+// Check Losing Condition
 
 const checkLosing = () => {
   gameOver = hitthewall(snakeHead()) || hitSelf()
