@@ -3,14 +3,12 @@
 const backButton = document.getElementById('backBtn')
 
 backButton.addEventListener('click', () => {
-  window.location.href =
-    'file:///Users/sengkitmun/ga_seir/projects/Greedy-Snake/start.html'
+  window.location.href = 'https://thoughtless-brothers.surge.sh'
 })
 
 const playAgainButton = document.getElementById('playAgainBtn')
 playAgainButton.addEventListener('click', () => {
-  window.location.href =
-    'file:///Users/sengkitmun/ga_seir/projects/Greedy-Snake/game.html'
+  window.location.href = 'https://thoughtless-brothers.surge.sh/game'
 })
 
 // Control game Speed, game score and main game refresh rate
@@ -18,10 +16,12 @@ let lastRenderTime = 0
 let gameOver = false
 const snakeSpeed = 10
 let gameScore = 0
+const displayMessage = document.getElementById('messageBoard')
 
 const gameRate = (currentTime) => {
   if (gameOver === true) {
-    document.getElementById('messageBoard').innerText = `You lose, try again!`
+    displayMessage.style.color = 'red'
+    displayMessage.innerText = `You lose, try again!!!`
     return
   }
 

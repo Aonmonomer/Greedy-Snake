@@ -12,13 +12,13 @@
 
 ## **_Description_**
 
-### Project Greedy-Snake is a browser-based game that basically started with a short snake and a dot.
+### Project Greedy-Snake is a browser-based game that basically started with a green short snake and a yellow dot.
 
-### Player will need to activate and navigate the snake with up, down, left, right arrow key to capture the dot.
+### Player will need to activate and navigate the snake with up, down, left, right arrow key to capture the yellow dot.
 
-### For each dot the snake captured, the snake will grow a bit longer and the score will go up by 10.
+### For each yellow dot the snake captured, the snake will grow a bit longer and the score will go up by 10.
 
-### But the game will end whenever the snake hit the wall of the board or hit its own body.
+### The game will end whenever the snake hit the wall of the board or hit its own body.
 
 ---
 
@@ -36,10 +36,21 @@
 
 ---
 
+## **_Snake Game Screenshots_**
+
+![Image](https://i.ibb.co/5RVnt4S/Screen-Shot-2022-07-07-at-10-22-34-AM.png)
+![Image](https://i.ibb.co/VJ7C88d/Screen-Shot-2022-07-07-at-10-11-16-AM.png)
+
+---
+
 ## **_Credits_**
 
-## Project progression: trello.com
+## Snake Project tutorial guide: [Web Dev Simplified on Youtube](https://www.youtube.com/watch?v=QTcIXok9wNY)
 
-## Project guide: github.com
+## Project progression: [trello.com](https://trello.com/b/eQyWdCAp/greedy-snake-project)
 
-## Snake game sample: google.com
+## Project guide: [github.com](https://github.com/Aonmonomer/Greedy-Snake)
+
+## Snake game sample: [google.com](https://www.google.com/search?q=google+snake&biw=1440&bih=690&sxsrf=ALiCzsYr6VvXfB3UzSSMGFnyMKJ_X9qD6g%3A1656807983757&ei=L-LAYsLxLayoptQPz6CbwAQ&ved=0ahUKEwiCxdTautv4AhUslIkEHU_QBkgQ4dUDCA4&uact=5&oq=google+snake&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyCAgAELEDEJECMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQRxCwAzoHCAAQsAMQQzoKCAAQ5AIQsAMYAToRCC4QsQMQgwEQxwEQ0QMQkQI6BQgAEJECOgsIABCxAxCDARCRAjoLCAAQgAQQsQMQgwE6CAgAEIAEELEDOgQIABADSgQIQRgASgQIRhgBUJoNWNEQYLISaAFwAHgAgAFEiAGbApIBATWYAQCgAQHIARHAAQHaAQYIARABGAk&sclient=gws-wiz)
+
+## Snake game image: [DuckDuckGo Search](https://duckduckgo.com/)
