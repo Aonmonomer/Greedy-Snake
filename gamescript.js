@@ -8,14 +8,7 @@ backButton.addEventListener('click', () => {
 
 const playAgainButton = document.getElementById('playAgainBtn')
 playAgainButton.addEventListener('click', () => {
-  location.href = 'game.html'
-  // gameScore = 0
-  // document.getElementById('scoreDisplay').innerText = '0000'
-  // displayMessage.style.color = 'black'
-  // displayMessage.innerText = 'Have fun!!'
-  // snakeBoard.innerHTML = ''
-  // drawFood(snakeBoard)
-  // drawSnake(snakeBoard)
+  location.reload()
 })
 
 // Control game Speed, game score and main game refresh rate
@@ -31,8 +24,8 @@ const gameRate = (currentTime) => {
     displayMessage.innerText = `You lose, try again!!!`
     return
   }
-
   requestAnimationFrame(gameRate)
+
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
   if (secondsSinceLastRender < 1 / snakeSpeed) return
   lastRenderTime = currentTime
@@ -50,12 +43,6 @@ const drawSnake = (snakeBoard) => {
     snakePiece.style.gridColumnStart = bodyPiece.x
     snakePiece.setAttribute('class', 'snake')
     snakeBoard.appendChild(snakePiece)
-
-    // const snakePiece2 = document.createElement('div')
-    // snakePiece2.style.gridRowStart = bodyPiece.y
-    // snakePiece2.style.gridColumnStart = bodyPiece.x + 1
-    // snakePiece2.setAttribute('class', 'snake')
-    // snakeBoard.appendChild(snakePiece2)
   })
 }
 

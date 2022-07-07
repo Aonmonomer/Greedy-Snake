@@ -54,3 +54,5 @@
 ## Snake game sample: [google.com](https://www.google.com/search?q=google+snake&biw=1440&bih=690&sxsrf=ALiCzsYr6VvXfB3UzSSMGFnyMKJ_X9qD6g%3A1656807983757&ei=L-LAYsLxLayoptQPz6CbwAQ&ved=0ahUKEwiCxdTautv4AhUslIkEHU_QBkgQ4dUDCA4&uact=5&oq=google+snake&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyCAgAELEDEJECMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQRxCwAzoHCAAQsAMQQzoKCAAQ5AIQsAMYAToRCC4QsQMQgwEQxwEQ0QMQkQI6BQgAEJECOgsIABCxAxCDARCRAjoLCAAQgAQQsQMQgwE6CAgAEIAEELEDOgQIABADSgQIQRgASgQIRhgBUJoNWNEQYLISaAFwAHgAgAFEiAGbApIBATWYAQCgAQHIARHAAQHaAQYIARABGAk&sclient=gws-wiz)
 
 ## Snake game image: [DuckDuckGo Search](https://duckduckgo.com/)
+
+## Game key guide: [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)

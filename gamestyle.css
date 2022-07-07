@@ -63,12 +63,12 @@ button{
   grid-template-columns: repeat(21, 1fr);
 }
 .snake{
-  background-color: olivedrab;
+  background-color:greenyellow;
   border: none;
 }
 
 .food{
-  background-color: crimson;
+  background-color: red;
   border: black solid 1px;
   border-radius: 50%;
 }
