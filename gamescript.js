@@ -3,12 +3,12 @@
 const backButton = document.getElementById('backBtn')
 
 backButton.addEventListener('click', () => {
-  window.location.href = 'https://thoughtless-brothers.surge.sh'
+  window.location.href = 'https://marvelous-stage.surge.sh'
 })
 
 const playAgainButton = document.getElementById('playAgainBtn')
 playAgainButton.addEventListener('click', () => {
-  window.location.href = 'https://thoughtless-brothers.surge.sh/game'
+  window.location.href = 'https://marvelous-stage.surge.sh/game'
 })
 
 // Control game Speed, game score and main game refresh rate
