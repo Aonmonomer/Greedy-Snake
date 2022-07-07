@@ -6,6 +6,8 @@
 
 ## **_Links_**
 
+## Link to my game: [Greedy-Snake](https://marvelous-stage.surge.sh/)
+
 [Trello Progress](https://trello.com/b/eQyWdCAp/greedy-snake-project) | [GitHub](https://github.com/Aonmonomer) | [LinkedIn](https://www.linkedin.com/in/cedric-mun-559820243/)
 
 ---
@@ -39,7 +41,7 @@
 ## **_Snake Game Screenshots_**
 
 ![Image](https://i.ibb.co/5RVnt4S/Screen-Shot-2022-07-07-at-10-22-34-AM.png)
-![Image](https://i.ibb.co/VJ7C88d/Screen-Shot-2022-07-07-at-10-11-16-AM.png)
+![Image](https://i.ibb.co/Dpv9N5g/Screen-Shot-2022-07-07-at-4-51-28-PM.png)
 
 ---
 
