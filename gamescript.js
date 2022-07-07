@@ -53,7 +53,7 @@ let draw = () => {
 }
 
 // Move the snake & update the snake
-const snakeBody = [{ x: 11, y: 11 }]
+const snakeBody = [{ x: 15, y: 15 }]
 const snakeBoard = document.getElementById('snakeBoard')
 
 const updateSnake = () => {
@@ -104,7 +104,7 @@ let getControlDirection = () => {
 
 // Create Food
 
-let food = { x: 5, y: 11 }
+let food = { x: 15, y: 10 }
 
 const drawFood = (snakeBoard) => {
   const snakeFood = document.createElement('div')
@@ -159,7 +159,7 @@ let randomFoodPosition = () => {
   return newFoodPosition
 }
 
-const boardSize = 21
+const boardSize = 30
 const randomBoardPosition = () => {
   return {
     x: Math.floor(Math.random() * boardSize) + 1,
