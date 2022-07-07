@@ -3,12 +3,19 @@
 const backButton = document.getElementById('backBtn')
 
 backButton.addEventListener('click', () => {
-  window.location.href = 'https://marvelous-stage.surge.sh'
+  location.href = 'index.html'
 })
 
 const playAgainButton = document.getElementById('playAgainBtn')
 playAgainButton.addEventListener('click', () => {
-  window.location.href = 'https://marvelous-stage.surge.sh/game'
+  location.href = 'game.html'
+  // gameScore = 0
+  // document.getElementById('scoreDisplay').innerText = '0000'
+  // displayMessage.style.color = 'black'
+  // displayMessage.innerText = 'Have fun!!'
+  // snakeBoard.innerHTML = ''
+  // drawFood(snakeBoard)
+  // drawSnake(snakeBoard)
 })
 
 // Control game Speed, game score and main game refresh rate
@@ -43,6 +50,12 @@ const drawSnake = (snakeBoard) => {
     snakePiece.style.gridColumnStart = bodyPiece.x
     snakePiece.setAttribute('class', 'snake')
     snakeBoard.appendChild(snakePiece)
+
+    // const snakePiece2 = document.createElement('div')
+    // snakePiece2.style.gridRowStart = bodyPiece.y
+    // snakePiece2.style.gridColumnStart = bodyPiece.x + 1
+    // snakePiece2.setAttribute('class', 'snake')
+    // snakeBoard.appendChild(snakePiece2)
   })
 }
 

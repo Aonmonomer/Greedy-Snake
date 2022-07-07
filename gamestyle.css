@@ -64,12 +64,12 @@ button{
 }
 .snake{
   background-color: olivedrab;
-  border: 2px solid black;
+  border: none;
 }
 
 .food{
-  background-color: yellow;
-  border: 2px solid black;
+  background-color: crimson;
+  border: black solid 1px;
   border-radius: 50%;
 }
 
