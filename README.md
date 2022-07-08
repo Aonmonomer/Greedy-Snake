@@ -14,11 +14,11 @@
 
 ## **_Description_**
 
-### Project Greedy-Snake is a browser-based game that basically started with a green short snake and a yellow dot.
+### Project Greedy-Snake is a browser-based game that basically started with a green short snake and a red dot.
 
-### Player will need to activate and navigate the snake with up, down, left, right arrow key to capture the yellow dot.
+### Player will need to activate and navigate the snake with up, down, left, right arrow key to capture the red dot.
 
-### For each yellow dot the snake captured, the snake will grow a bit longer and the score will go up by 10.
+### For each red dot the snake captured, the snake will grow a bit longer and the score will go up by 10.
 
 ### The game will end whenever the snake hit the wall of the board or hit its own body.
 

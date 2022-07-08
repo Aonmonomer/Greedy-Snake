@@ -144,7 +144,7 @@ const updateFood = () => {
 
 const addTail = () => {
   for (let i = 0; i < newTail; i++) {
-    snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
+    snakeBody.push({ ...snakeBody[snakeBody.length] })
   }
   newTail = 0
 }
@@ -170,7 +170,9 @@ const randomBoardPosition = () => {
 // Check Losing Condition
 
 const checkLosing = () => {
-  gameOver = hitthewall(snakeBody[0]) || hitSelf()
+  if (hitthewall(snakeBody[0]) || hitSelf()) {
+    gameOver = true
+  }
 }
 
 const hitthewall = (position) => {
