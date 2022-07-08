@@ -123,7 +123,7 @@ const growSnake = (amount) => {
   newTail += amount
 }
 const samePositions = (position1, position2) => {
-  return position1.x === position2.x && position1.y === position2.y
+  if (position1.x === position2.x && position1.y === position2.y) return true
 }
 
 const onSnake = (position, { ignoreHead = false } = {}) => {
@@ -170,20 +170,17 @@ const randomBoardPosition = () => {
 // Check Losing Condition
 
 const checkLosing = () => {
-  gameOver = hitthewall(snakeHead()) || hitSelf()
+  gameOver = hitthewall(snakeBody[0]) || hitSelf()
 }
 
 const hitthewall = (position) => {
-  return (
+  if (
     position.x < 1 ||
     position.x > boardSize ||
     position.y < 1 ||
     position.y > boardSize
   )
-}
-
-const snakeHead = () => {
-  return snakeBody[0]
+    return true
 }
 
 const hitSelf = () => {
